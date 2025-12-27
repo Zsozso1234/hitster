@@ -2,7 +2,7 @@
 <html lang="ro">
 <head>
   <meta charset="UTF-8">
-  <title>Hitster Player - Spotify Embed cu masca</title>
+  <title>Hitster Player - Spotify Embed cu doua masci</title>
 
   <style>
     body {
@@ -32,7 +32,7 @@
       border: none;
     }
 
-    /* Masca care acopera titlul + artistul */
+    /* Masca care acopera titlul + artistul (partea de sus) */
     .mask {
       position: absolute;
       top: 0;
@@ -41,6 +41,17 @@
       height: 80px;            /* poti modifica aici pana gasesti combinatia perfecta */
       background: #000;
       z-index: 2;
+    }
+
+    /* Masca 2: acopera 100% din height, latimea configurabila */
+    .mask2 {
+      position: absolute;
+      top: 0;
+      left: 0;                /* pozitia stanga */
+      width: 200px;             /* latimea mascii, poti modifica */
+      height: 100%;            /* acopera tot pe verticala */
+      background: #000;
+      z-index: 3;              /* peste mask1 */
     }
 
     .error {
@@ -67,6 +78,7 @@
   } else {
     content.innerHTML = `
       <div class="mask"></div>
+      <div class="mask2"></div>
       <iframe
         src="https://open.spotify.com/embed/track/${trackId}?theme=0"
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
