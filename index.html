@@ -2,7 +2,7 @@
 <html lang="ro">
 <head>
   <meta charset="UTF-8">
-  <title>Hitster Player - Spotify Embed</title>
+  <title>Hitster Player - Spotify Embed cu masca</title>
 
   <style>
     body {
@@ -17,9 +17,10 @@
 
     /* Container vizibil */
     .player-wrapper {
-      width: 90vw;       /* responsiv */
-      max-width: 400px;  /* limitare pe desktop */
-      height: 80px;      /* dimensiunea oficială Spotify track */
+      position: relative;       /* important pentru masca */
+      width: 90vw;              
+      max-width: 400px;         
+      height: 80px;             /* dimensiunea oficiala Spotify track */
       border-radius: 16px;
       background: #000;
       overflow: hidden;
@@ -27,10 +28,8 @@
 
     iframe {
       width: 100%;
-      height: 80px;      /* fix la recomandare Spotify */
+      height: 80px;             /* recomandat Spotify track */
       border: none;
     }
 
-    .error {
-      color: white;
-      font-s
+    /* Masca care acopera titlul +*
