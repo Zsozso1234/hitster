@@ -2,7 +2,7 @@
 <html lang="ro">
 <head>
   <meta charset="UTF-8">
-  <title>Hitster Player</title>
+  <title>Hitster Player - Test Wrapper</title>
 
   <style>
     body {
@@ -15,22 +15,20 @@
       font-family: Arial, sans-serif;
     }
 
-    /* Containerul vizibil */
+    /* Container vizibil */
     .player-wrapper {
-      width: 90vw;
-      max-width: 400px;
-      height: 110px;        /* DOAR zona cu controale */
-      overflow: hidden;
+      width: 360px;
+      height: 200px;           /* începe cu înălțime medie */
+      /* overflow: hidden; */   /* comentat temporar ca să vedem tot player-ul */
       border-radius: 16px;
       background: #000;
     }
 
-    /* iframe mai mare decât containerul */
     iframe {
       width: 100%;
-      height: 200px;        /* mai mare decât wrapper */
+      height: 200px;           /* poate fi ajustat în continuare */
       border: none;
-      margin-top: -90px;    /* mutăm iframe-ul în sus */
+      /* margin-top: -90px; */  /* comentat temporar */
     }
 
     .error {
