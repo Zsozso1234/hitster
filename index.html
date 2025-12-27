@@ -2,7 +2,7 @@
 <html lang="ro">
 <head>
   <meta charset="UTF-8">
-  <title>Hitster Player - Test Wrapper</title>
+  <title>Hitster Player - Spotify Embed</title>
 
   <style>
     body {
@@ -17,50 +17,20 @@
 
     /* Container vizibil */
     .player-wrapper {
-      width: 360px;
-      height: 200px;           /* începe cu înălțime medie */
-      /* overflow: hidden; */   /* comentat temporar ca să vedem tot player-ul */
+      width: 90vw;       /* responsiv */
+      max-width: 400px;  /* limitare pe desktop */
+      height: 80px;      /* dimensiunea oficială Spotify track */
       border-radius: 16px;
       background: #000;
+      overflow: hidden;
     }
 
     iframe {
       width: 100%;
-      height: 200px;           /* poate fi ajustat în continuare */
+      height: 80px;      /* fix la recomandare Spotify */
       border: none;
-      /* margin-top: -90px; */  /* comentat temporar */
     }
 
     .error {
       color: white;
-      font-size: 18px;
-      padding: 20px;
-      text-align: center;
-    }
-  </style>
-</head>
-<body>
-
-<div class="player-wrapper">
-  <div id="content"></div>
-</div>
-
-<script>
-  const params = new URLSearchParams(window.location.search);
-  const trackId = params.get("track");
-  const content = document.getElementById("content");
-
-  if (!trackId) {
-    content.innerHTML = '<div class="error">❌ Nicio melodie selectată</div>';
-  } else {
-    content.innerHTML = `
-      <iframe
-        src="https://open.spotify.com/embed/track/${trackId}?theme=0"
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
-      </iframe>
-    `;
-  }
-</script>
-
-</body>
-</html>
+      font-s
